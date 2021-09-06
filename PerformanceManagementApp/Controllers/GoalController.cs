@@ -21,7 +21,7 @@ namespace PerformanceManagementApp.Controllers
         [HttpPost]
         public IActionResult Create(GoalCreateModel goal)
         {
-            return View();
+            return View(goal);
         }
     }
 }
