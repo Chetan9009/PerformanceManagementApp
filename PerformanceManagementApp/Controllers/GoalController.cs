@@ -35,8 +35,7 @@ namespace PerformanceManagementApp.Controllers
             GoalService createGoal = new GoalService();
                 
            _= createGoal.Create(requestCreateGoal);
-
-          
+                     
             return View(goal);
         }
     }
