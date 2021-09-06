@@ -1,0 +1,8 @@
+C:\Users\SHRI\source\repos\PerformanceManagementApp\MidLayer\bin\Debug\netcoreapp3.1\MidLayer.deps.json
+C:\Users\SHRI\source\repos\PerformanceManagementApp\MidLayer\bin\Debug\netcoreapp3.1\MidLayer.dll
+C:\Users\SHRI\source\repos\PerformanceManagementApp\MidLayer\bin\Debug\netcoreapp3.1\MidLayer.pdb
+C:\Users\SHRI\source\repos\PerformanceManagementApp\MidLayer\obj\Debug\netcoreapp3.1\MidLayer.AssemblyInfoInputs.cache
+C:\Users\SHRI\source\repos\PerformanceManagementApp\MidLayer\obj\Debug\netcoreapp3.1\MidLayer.AssemblyInfo.cs
+C:\Users\SHRI\source\repos\PerformanceManagementApp\MidLayer\obj\Debug\netcoreapp3.1\MidLayer.csproj.CoreCompileInputs.cache
+C:\Users\SHRI\source\repos\PerformanceManagementApp\MidLayer\obj\Debug\netcoreapp3.1\MidLayer.dll
+C:\Users\SHRI\source\repos\PerformanceManagementApp\MidLayer\obj\Debug\netcoreapp3.1\MidLayer.pdb

@@ -4,14 +4,14 @@
     "C:\\Users\\SHRI\\source\\repos\\PerformanceManagementApp\\ServiceLayer\\ServiceLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SHRI\\source\\repos\\PerformanceManagementApp\\PerformanceManagementApp\\PerformanceManagementApp.csproj": {
+    "C:\\Users\\SHRI\\source\\repos\\PerformanceManagementApp\\MidLayer\\MidLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SHRI\\source\\repos\\PerformanceManagementApp\\PerformanceManagementApp\\PerformanceManagementApp.csproj",
-        "projectName": "PerformanceManagementApp",
-        "projectPath": "C:\\Users\\SHRI\\source\\repos\\PerformanceManagementApp\\PerformanceManagementApp\\PerformanceManagementApp.csproj",
+        "projectUniqueName": "C:\\Users\\SHRI\\source\\repos\\PerformanceManagementApp\\MidLayer\\MidLayer.csproj",
+        "projectName": "MidLayer",
+        "projectPath": "C:\\Users\\SHRI\\source\\repos\\PerformanceManagementApp\\MidLayer\\MidLayer.csproj",
         "packagesPath": "C:\\Users\\SHRI\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SHRI\\source\\repos\\PerformanceManagementApp\\PerformanceManagementApp\\obj\\",
+        "outputPath": "C:\\Users\\SHRI\\source\\repos\\PerformanceManagementApp\\MidLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SHRI\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,12 +39,6 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "dependencies": {
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-              "target": "Package",
-              "version": "[3.1.5, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -56,9 +50,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -91,8 +82,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\SHRI\\source\\repos\\PerformanceManagementApp\\PerformanceManagementApp\\PerformanceManagementApp.csproj": {
-                "projectPath": "C:\\Users\\SHRI\\source\\repos\\PerformanceManagementApp\\PerformanceManagementApp\\PerformanceManagementApp.csproj"
+              "C:\\Users\\SHRI\\source\\repos\\PerformanceManagementApp\\MidLayer\\MidLayer.csproj": {
+                "projectPath": "C:\\Users\\SHRI\\source\\repos\\PerformanceManagementApp\\MidLayer\\MidLayer.csproj"
               }
             }
           }

@@ -8,6 +8,7 @@ C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin\Debug\netcoreapp3.1\PerformanceManagementApp.pdb
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin\Debug\netcoreapp3.1\PerformanceManagementApp.Views.dll
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin\Debug\netcoreapp3.1\PerformanceManagementApp.Views.pdb
+C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
@@ -23,6 +24,7 @@ C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
@@ -81,6 +83,11 @@ C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin\Debug\netcoreapp3.1\MidLayer.dll
+C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin\Debug\netcoreapp3.1\ServiceLayer.dll
+C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin\Debug\netcoreapp3.1\ServiceLayer.pdb
+C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin\Debug\netcoreapp3.1\MidLayer.pdb
+C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\obj\Debug\netcoreapp3.1\PerformanceManagementApp.csproj.AssemblyReference.cache
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\obj\Debug\netcoreapp3.1\PerformanceManagementApp.AssemblyInfoInputs.cache
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\obj\Debug\netcoreapp3.1\PerformanceManagementApp.AssemblyInfo.cs
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\obj\Debug\netcoreapp3.1\PerformanceManagementApp.csproj.CoreCompileInputs.cache

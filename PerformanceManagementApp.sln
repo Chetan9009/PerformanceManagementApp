@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerformanceManagementApp", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLayer", "ServiceLayer\ServiceLayer.csproj", "{3B6C25CA-3C7A-4711-98E2-6712FB382A11}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MidLayer", "MidLayer\MidLayer.csproj", "{863B6146-CDA7-45F2-9338-74A2BFE37D6E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3B6C25CA-3C7A-4711-98E2-6712FB382A11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B6C25CA-3C7A-4711-98E2-6712FB382A11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B6C25CA-3C7A-4711-98E2-6712FB382A11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{863B6146-CDA7-45F2-9338-74A2BFE37D6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{863B6146-CDA7-45F2-9338-74A2BFE37D6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{863B6146-CDA7-45F2-9338-74A2BFE37D6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{863B6146-CDA7-45F2-9338-74A2BFE37D6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
