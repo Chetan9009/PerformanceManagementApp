@@ -83,10 +83,8 @@ C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin\Debug\netcoreapp3.1\MidLayer.dll
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin\Debug\netcoreapp3.1\ServiceLayer.dll
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin\Debug\netcoreapp3.1\ServiceLayer.pdb
-C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\bin\Debug\netcoreapp3.1\MidLayer.pdb
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\obj\Debug\netcoreapp3.1\PerformanceManagementApp.csproj.AssemblyReference.cache
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\obj\Debug\netcoreapp3.1\PerformanceManagementApp.AssemblyInfoInputs.cache
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\obj\Debug\netcoreapp3.1\PerformanceManagementApp.AssemblyInfo.cs
@@ -101,6 +99,8 @@ C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\obj
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\obj\Debug\netcoreapp3.1\PerformanceManagementApp.TagHelpers.output.cache
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\obj\Debug\netcoreapp3.1\PerformanceManagementApp.RazorCoreGenerate.cache
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\obj\Debug\netcoreapp3.1\Razor\Views\Goal\Create.cshtml.g.cs
+C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\obj\Debug\netcoreapp3.1\Razor\Views\Goal\CreatedGoal.cshtml.g.cs
+C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\obj\Debug\netcoreapp3.1\Razor\Views\Goal\GetAllGoals.cshtml.g.cs
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs

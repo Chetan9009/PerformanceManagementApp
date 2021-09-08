@@ -1824,22 +1824,11 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "MidLayer/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "compile": {
-          "bin/placeholder/MidLayer.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/MidLayer.dll": {}
-        }
-      },
       "ServiceLayer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "Microsoft.AspNet.WebApi.Client": "5.2.7",
-          "MidLayer": "1.0.0"
+          "Microsoft.AspNet.WebApi.Client": "5.2.7"
         },
         "compile": {
           "bin/placeholder/ServiceLayer.dll": {}
@@ -6143,11 +6132,6 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
-    },
-    "MidLayer/1.0.0": {
-      "type": "project",
-      "path": "../MidLayer/MidLayer.csproj",
-      "msbuildProject": "../MidLayer/MidLayer.csproj"
     },
     "ServiceLayer/1.0.0": {
       "type": "project",

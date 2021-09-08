@@ -1,30 +1,65 @@
-﻿using MidLayer;
+﻿
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ServiceLayer
 {
     public class GoalService
-    {
-        static HttpClient client = new HttpClient();
-        public async Task<Uri> Create(GoalRequest goal)
-        {
-            GoalCreateRequest createGoalRequest = new GoalCreateRequest();
-
-            createGoalRequest.CreatedBy = goal.CreatedBy;
-            createGoalRequest.Title = goal.Title;
-            createGoalRequest.StartDate = goal.StartDate;
-            createGoalRequest.EndDate = goal.EndDate;
-            createGoalRequest.Score = goal.Score;
-
-            HttpResponseMessage response = await client.PostAsJsonAsync("https://localhost:44369/api/goal/create", createGoalRequest);
+    {               
+        static readonly HttpClient client = new HttpClient();
+        public async Task<GoalCreateResponse> Create(GoalCreateRequest goal)
+        {          
+            GoalCreateRequest createGoalRequest = new GoalCreateRequest
+            {
+                CreatedBy = goal.CreatedBy,
+                Title = goal.Title,
+                StartDate = goal.StartDate,
+                EndDate = goal.EndDate,
+                Score = goal.Score
+            };
+             var response = await client.PostAsJsonAsync("https://localhost:44369/api/goal/create", createGoalRequest);
             response.EnsureSuccessStatusCode();
 
-            // return URI of the created resource.
-            return response.Headers.Location;
+            GoalCreateResponse createGoalResponse = new GoalCreateResponse();
+            if (response.IsSuccessStatusCode)
+             {              
+                var getApiResponse = response.Content.ReadAsStringAsync().Result;
+               createGoalResponse = JsonConvert.DeserializeObject<GoalCreateResponse>(getApiResponse);
+            }          
+         return createGoalResponse;
+                        
+        }
+
+        public async Task<List<GoalCreateResponse>> GetAllGoals()
+        {           
+            var response = await client.GetAsync("https://localhost:44369/api/goal/get");
+            response.EnsureSuccessStatusCode();
+            List<GoalCreateResponse> createGoalAllResponse = new List<GoalCreateResponse>();
+            if (response.IsSuccessStatusCode)
+            {
+                var getAllGoalsApiResponse = response.Content.ReadAsStringAsync().Result;
+                var allGoals = JsonConvert.DeserializeObject<List<GoalCreateResponse>>(getAllGoalsApiResponse);
+
+                foreach( var i in allGoals)
+                {
+                    createGoalAllResponse.Add(new GoalCreateResponse
+                    {
+                        Id=i.Id,
+                        CreatedBy = i.CreatedBy,
+                        Title = i.Title,
+                        StartDate = i.StartDate,
+                        EndDate = i.EndDate,
+                        Score = i.Score
+                      });
+
+                }
+            }
+            return createGoalAllResponse;
 
         }
     }

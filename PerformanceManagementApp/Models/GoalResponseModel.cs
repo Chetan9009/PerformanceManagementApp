@@ -1,9 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace MidLayer
+namespace PerformanceManagementApp.Models
 {
-    public class GoalRequest
+    public class GoalResponseModel
     {
+        public int Id { get; set; }
+
+    
         public int? CreatedBy { get; set; }
         public string Title { get; set; }
         public DateTime? StartDate { get; set; }

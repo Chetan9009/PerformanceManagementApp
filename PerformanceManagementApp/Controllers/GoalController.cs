@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MidLayer;
+
+using Newtonsoft.Json;
 using PerformanceManagementApp.Models;
 using ServiceLayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 
@@ -22,21 +24,87 @@ namespace PerformanceManagementApp.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Create(GoalCreateModel goal)
+        public async Task<IActionResult> Create(GoalCreateModel goal)
         {
 
-            GoalRequest requestCreateGoal = new GoalRequest();
-            requestCreateGoal.CreatedBy = goal.CreatedBy;
-            requestCreateGoal.Title = goal.Title;
-            requestCreateGoal.StartDate = goal.StartDate;
-            requestCreateGoal.EndDate = goal.EndDate;
-            requestCreateGoal.Score = goal.Score;
+            GoalCreateRequest requestCreateGoal = new GoalCreateRequest
+            {
+                CreatedBy = goal.CreatedBy,
+                Title = goal.Title,
+                StartDate = goal.StartDate,
+                EndDate = goal.EndDate,
+                Score = goal.Score
+            };
 
             GoalService createGoal = new GoalService();
-                
-           _= createGoal.Create(requestCreateGoal);
-                     
-            return View(goal);
+            var responseGoal =await createGoal.Create(requestCreateGoal);
+            GoalResponseModel resopnseCreateModel = new GoalResponseModel()
+            {
+                Id = responseGoal.Id,
+                CreatedBy = responseGoal.CreatedBy,
+                Title = responseGoal.Title,
+                StartDate = responseGoal.StartDate,
+                EndDate = responseGoal.EndDate,
+                Score = responseGoal.Score
+
+            };
+                      
+            return View("CreatedGoal",resopnseCreateModel);
         }
+
+        [Route("Get")]
+        [HttpGet]
+        public async Task<IActionResult> GetGoals( )
+        {
+              GoalService createGoal = new GoalService();
+            var responseAllGoals = await createGoal.GetAllGoals();
+            List<GoalResponseModel> resopnseAllGoalsCreateModel = new List<GoalResponseModel>();
+
+            foreach(var i in responseAllGoals)
+            {
+               resopnseAllGoalsCreateModel.Add(new GoalResponseModel
+               {
+                Id = i.Id,
+                CreatedBy = i.CreatedBy,
+                Title = i.Title,
+                StartDate = i.StartDate,
+                EndDate = i.EndDate,
+                Score = i.Score
+               });
+               
+
+            };
+
+            return View("GetAllGoals",resopnseAllGoalsCreateModel);
+        }
+
+        //static readonly HttpClient client = new HttpClient();
+        //[HttpPost]
+        //public async Task<IActionResult> Create(GoalRequest goal)
+        //{
+        //    GoalCreateRequest createGoalRequest = new GoalCreateRequest
+        //    {
+        //        CreatedBy = goal.CreatedBy,
+        //        Title = goal.Title,
+        //        StartDate = goal.StartDate,
+        //        EndDate = goal.EndDate,
+        //        Score = goal.Score
+        //    };
+        //    var response = await client.PostAsJsonAsync("https://localhost:44369/api/goal/create", createGoalRequest);
+        //    response.EnsureSuccessStatusCode();
+
+        //    GoalResponseModel createGoalResponse = new GoalResponseModel();
+        //    if (response.IsSuccessStatusCode)
+        //    {
+        //        var getApiResponse = response.Content.ReadAsStringAsync().Result;
+        //        createGoalResponse = JsonConvert.DeserializeObject<GoalResponseModel>(getApiResponse);
+
+        //        //TempData["abc"] = createGoalResponse;
+
+        //        //return RedirectToAction("Index");
+        //    }
+
+        //    return View("CreatedGoal",createGoalResponse);
+        //}
     }
 }

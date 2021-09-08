@@ -1441,16 +1441,6 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
-      },
-      "MidLayer/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "compile": {
-          "bin/placeholder/MidLayer.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/MidLayer.dll": {}
-        }
       }
     }
   },
@@ -5282,17 +5272,11 @@
         "system.xml.xmldocument.4.3.0.nupkg.sha512",
         "system.xml.xmldocument.nuspec"
       ]
-    },
-    "MidLayer/1.0.0": {
-      "type": "project",
-      "path": "../MidLayer/MidLayer.csproj",
-      "msbuildProject": "../MidLayer/MidLayer.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Microsoft.AspNet.WebApi.Client >= 5.2.7",
-      "MidLayer >= 1.0.0"
+      "Microsoft.AspNet.WebApi.Client >= 5.2.7"
     ]
   },
   "packageFolders": {
@@ -5321,11 +5305,7 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {
-            "C:\\Users\\SHRI\\source\\repos\\PerformanceManagementApp\\MidLayer\\MidLayer.csproj": {
-              "projectPath": "C:\\Users\\SHRI\\source\\repos\\PerformanceManagementApp\\MidLayer\\MidLayer.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

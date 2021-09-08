@@ -1574,18 +1574,9 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
-      "MidLayer/1.0.0": {
-        "runtime": {
-          "MidLayer.dll": {}
-        },
-        "compile": {
-          "MidLayer.dll": {}
-        }
-      },
       "ServiceLayer/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNet.WebApi.Client": "5.2.7",
-          "MidLayer": "1.0.0"
+          "Microsoft.AspNet.WebApi.Client": "5.2.7"
         },
         "runtime": {
           "ServiceLayer.dll": {}
@@ -4056,11 +4047,6 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
-    },
-    "MidLayer/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     },
     "ServiceLayer/1.0.0": {
       "type": "project",
