@@ -78,6 +78,16 @@ namespace PerformanceManagementApp.Controllers
             return View("GetAllGoals",resopnseAllGoalsCreateModel);
         }
 
+        [Route("delete")]
+        [HttpDelete]
+        public async Task<IActionResult> Delete(int id)
+        {
+            GoalService deleteGoal = new GoalService();
+            var responseAllGoals = await deleteGoal.Delete(id);
+            List<GoalResponseModel> resopnseAllGoalsCreateModel = new List<GoalResponseModel>();
+             return View("Create");
+        }
+
         //static readonly HttpClient client = new HttpClient();
         //[HttpPost]
         //public async Task<IActionResult> Create(GoalRequest goal)

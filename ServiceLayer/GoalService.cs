@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -12,16 +13,17 @@ namespace ServiceLayer
     public class GoalService
     {               
         static readonly HttpClient client = new HttpClient();
-        public async Task<GoalCreateResponse> Create(GoalCreateRequest goal)
-        {          
-            GoalCreateRequest createGoalRequest = new GoalCreateRequest
-            {
-                CreatedBy = goal.CreatedBy,
-                Title = goal.Title,
-                StartDate = goal.StartDate,
-                EndDate = goal.EndDate,
-                Score = goal.Score
-            };
+        public async Task<GoalCreateResponse> Create(GoalCreateRequest createGoalRequest)
+        {
+            //GoalCreateRequest createGoalRequest = new GoalCreateRequest
+            //{
+            //    CreatedBy = goal.CreatedBy,
+            //    Title = goal.Title,
+            //    StartDate = goal.StartDate,
+            //    EndDate = goal.EndDate,
+            //    Score = goal.Score
+            //};
+           
              var response = await client.PostAsJsonAsync("https://localhost:44369/api/goal/create", createGoalRequest);
             response.EnsureSuccessStatusCode();
 
@@ -60,6 +62,15 @@ namespace ServiceLayer
                 }
             }
             return createGoalAllResponse;
+
+        }
+        public async Task<HttpStatusCode> Delete(int id)
+        {
+            var response = await client.PostAsJsonAsync("https://localhost:44369/api/goal/delete",id);
+            response.EnsureSuccessStatusCode();
+           
+            
+            return response.StatusCode;
 
         }
     }
