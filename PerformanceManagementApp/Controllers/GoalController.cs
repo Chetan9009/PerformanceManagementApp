@@ -6,6 +6,7 @@ using ServiceLayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -52,7 +53,7 @@ namespace PerformanceManagementApp.Controllers
             return View("CreatedGoal",resopnseCreateModel);
         }
 
-        [Route("Get")]
+       
         [HttpGet]
         public async Task<IActionResult> GetGoals( )
         {
@@ -78,14 +79,15 @@ namespace PerformanceManagementApp.Controllers
             return View("GetAllGoals",resopnseAllGoalsCreateModel);
         }
 
-        [Route("delete")]
+      
         [HttpDelete]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<HttpStatusCode> delete(string id)
         {
             GoalService deleteGoal = new GoalService();
-            var responseAllGoals = await deleteGoal.Delete(id);
+            HttpStatusCode response =await deleteGoal.Delete(id);
             List<GoalResponseModel> resopnseAllGoalsCreateModel = new List<GoalResponseModel>();
-             return View("Create");
+            //return View("Create");
+            return response;
         }
 
         //static readonly HttpClient client = new HttpClient();

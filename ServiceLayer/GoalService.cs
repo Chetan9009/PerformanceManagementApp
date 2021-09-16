@@ -64,12 +64,10 @@ namespace ServiceLayer
             return createGoalAllResponse;
 
         }
-        public async Task<HttpStatusCode> Delete(int id)
+        public async Task<HttpStatusCode> Delete(string id)
         {
-            var response = await client.PostAsJsonAsync("https://localhost:44369/api/goal/delete",id);
+            HttpResponseMessage response = await client.DeleteAsync("https://localhost:44369/api/goal/delete/{id}");
             response.EnsureSuccessStatusCode();
-           
-            
             return response.StatusCode;
 
         }
