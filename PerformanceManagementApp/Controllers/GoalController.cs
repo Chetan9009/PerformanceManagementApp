@@ -3,6 +3,7 @@
 using Newtonsoft.Json;
 using PerformanceManagementApp.Models;
 using ServiceLayer;
+using ServiceLayer.Contracts.Request;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -53,7 +54,36 @@ namespace PerformanceManagementApp.Controllers
             return View("CreatedGoal",resopnseCreateModel);
         }
 
-       
+
+      
+        public async Task<IActionResult> Update(GoalUpdateModel goal)
+        {
+
+           GoalUpdateRequest requestUpdateGoal = new GoalUpdateRequest
+            {
+                Id=goal.Id,
+                CreatedBy = goal.CreatedBy,
+                Title = goal.Title,
+                StartDate = goal.StartDate,
+                EndDate = goal.EndDate,
+                Score = goal.Score
+            };
+
+            GoalService createGoal = new GoalService();
+            var responseGoal = await createGoal.Update(requestUpdateGoal);
+            GoalResponseModel resopnseCreateModel = new GoalResponseModel()
+            {
+                Id = responseGoal.Id,
+                CreatedBy = responseGoal.CreatedBy,
+                Title = responseGoal.Title,
+                StartDate = responseGoal.StartDate,
+                EndDate = responseGoal.EndDate,
+                Score = responseGoal.Score
+
+            };
+
+            return View("CreatedGoal", resopnseCreateModel);
+        }
         [HttpGet]
         public async Task<IActionResult> GetGoals( )
         {
@@ -79,15 +109,40 @@ namespace PerformanceManagementApp.Controllers
             return View("GetAllGoals",resopnseAllGoalsCreateModel);
         }
 
-      
-        [HttpDelete]
-        public async Task<HttpStatusCode> delete(string id)
+        [HttpGet]
+        public async Task<IActionResult> GetGoal(int id)
+        {
+            GoalService createGoal = new GoalService();
+            var responseGoal = await createGoal.GetGoal(id);
+            GoalResponseModel resopnseGoalsCreateModel = new GoalResponseModel();
+
+            foreach (var i in responseGoal)
+            {
+
+                resopnseGoalsCreateModel.Id = i.Id;
+                resopnseGoalsCreateModel.CreatedBy = i.CreatedBy;
+                resopnseGoalsCreateModel.Title = i.Title;
+                resopnseGoalsCreateModel.StartDate = i.StartDate;
+                resopnseGoalsCreateModel.EndDate = i.EndDate;
+                resopnseGoalsCreateModel.Score = i.Score;
+                
+
+
+            };
+
+            return View("Edit", resopnseGoalsCreateModel);
+        }
+
+
+
+
+        public async Task<IActionResult> Delete(int id)
         {
             GoalService deleteGoal = new GoalService();
             HttpStatusCode response =await deleteGoal.Delete(id);
             List<GoalResponseModel> resopnseAllGoalsCreateModel = new List<GoalResponseModel>();
             //return View("Create");
-            return response;
+            return RedirectToAction("GetGoals");
         }
 
         //static readonly HttpClient client = new HttpClient();

@@ -4,7 +4,8 @@
     ViewData["Title"] = "GetAllGoals";
 }
 
-<h1>GetAllGoals</h1>
+<h1>All Goals</h1>
+<hr />
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -56,9 +57,11 @@
             </td>
             <td>
                 @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |*@
+        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |*@
                 @*@Html.ActionLink("Delete", "Delete", new { id = item.Id })*@
-                <a asp-controller="Goal" asp-action="delete" asp-route-id="@item.Id">Delete</a>
+
+                <a asp-controller="Goal" asp-action="GetGoal" asp-route-id="@item.Id">Edit</a> |
+                <a asp-controller="Goal" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
 }
