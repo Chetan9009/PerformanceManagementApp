@@ -7,8 +7,6 @@ namespace ServiceLayer.Contracts.Request
     public class GoalUpdateRequest
     {
         public int Id { get; set; }
-
-
         public int? CreatedBy { get; set; }
         public string Title { get; set; }
         public DateTime? StartDate { get; set; }

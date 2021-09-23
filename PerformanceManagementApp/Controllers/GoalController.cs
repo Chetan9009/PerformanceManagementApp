@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
 using PerformanceManagementApp.Models;
 using ServiceLayer;
@@ -21,8 +21,35 @@ namespace PerformanceManagementApp.Controllers
             return View();
         }
 
-        public IActionResult Create()
+        public async Task<List<SelectListItem>> DDlEmployee()
         {
+            EmployeeService createEmployee = new EmployeeService();
+            var responseAllEmployee = await createEmployee.GetAllEmployee();
+            List<SelectListItem> emplist = new List<SelectListItem>();
+            foreach (var i in responseAllEmployee)
+            {
+                emplist.Add(new SelectListItem { Text = i.FirstName + " " + i.LastName, Value = Convert.ToString(i.Id) }
+                 );
+            }
+
+            return emplist;
+
+            
+        }
+        public async Task<IActionResult> Create()
+        {
+            //EmployeeService createEmployee = new EmployeeService();
+            //var responseAllEmployee =await createEmployee.GetAllEmployee();
+            //List<SelectListItem> emplist = new List<SelectListItem>();
+            //foreach (var i in responseAllEmployee)
+            //{
+            //    emplist.Add(new SelectListItem { Text = i.FirstName + " " + i.LastName, Value = Convert.ToString(i.Id) }
+            //     );
+            //}     
+                
+            
+
+            ViewBag.Emp =await DDlEmployee();
             return View();
         }
         [HttpPost]
@@ -87,7 +114,7 @@ namespace PerformanceManagementApp.Controllers
         [HttpGet]
         public async Task<IActionResult> GetGoals( )
         {
-              GoalService createGoal = new GoalService();
+            GoalService createGoal = new GoalService();
             var responseAllGoals = await createGoal.GetAllGoals();
             List<GoalResponseModel> resopnseAllGoalsCreateModel = new List<GoalResponseModel>();
 
@@ -127,8 +154,9 @@ namespace PerformanceManagementApp.Controllers
                 resopnseGoalsCreateModel.Score = i.Score;
                 
 
-
             };
+           
+            ViewBag.Emp = await DDlEmployee();
 
             return View("Edit", resopnseGoalsCreateModel);
         }
