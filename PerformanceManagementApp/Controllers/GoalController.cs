@@ -38,17 +38,6 @@ namespace PerformanceManagementApp.Controllers
         }
         public async Task<IActionResult> Create()
         {
-            //EmployeeService createEmployee = new EmployeeService();
-            //var responseAllEmployee =await createEmployee.GetAllEmployee();
-            //List<SelectListItem> emplist = new List<SelectListItem>();
-            //foreach (var i in responseAllEmployee)
-            //{
-            //    emplist.Add(new SelectListItem { Text = i.FirstName + " " + i.LastName, Value = Convert.ToString(i.Id) }
-            //     );
-            //}     
-                
-            
-
             ViewBag.Emp =await DDlEmployee();
             return View();
         }
