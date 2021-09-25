@@ -102,6 +102,7 @@ C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\obj
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\obj\Debug\netcoreapp3.1\Razor\Views\Goal\CreatedGoal.cshtml.g.cs
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\obj\Debug\netcoreapp3.1\Razor\Views\Goal\Edit.cshtml.g.cs
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\obj\Debug\netcoreapp3.1\Razor\Views\Goal\GetAllGoals.cshtml.g.cs
+C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\obj\Debug\netcoreapp3.1\Razor\Views\Goal\GetEmployeeGoals.cshtml.g.cs
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\SHRI\source\repos\PerformanceManagementApp\PerformanceManagementApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs

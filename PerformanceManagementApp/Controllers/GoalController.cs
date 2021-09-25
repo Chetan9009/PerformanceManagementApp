@@ -126,6 +126,31 @@ namespace PerformanceManagementApp.Controllers
         }
 
         [HttpGet]
+        public async Task<IActionResult> GetEmployeeGoals()
+        {
+            EmployeGoalService empGoal = new EmployeGoalService();
+            var responseAllEmployeeGoals = await empGoal.GetAllEmployeeGoal();
+
+            List<EmployeeGoalModel> responseEmployeeGoal = new List<EmployeeGoalModel>();
+            foreach (var i in responseAllEmployeeGoals)
+            {
+                responseEmployeeGoal.Add(new EmployeeGoalModel
+                {
+                    Id = i.Id,
+                    CreatedBy = i.CreatedBy,
+                    FirstName = i.FirstName,
+                    LastName = i.LastName,
+                    Title = i.Title,
+                    StartDate = i.StartDate,
+                    EndDate = i.EndDate,
+                    Score = i.Score
+
+                });
+            };
+     return View(responseEmployeeGoal);
+ }
+
+        [HttpGet]
         public async Task<IActionResult> GetGoal(int id)
         {
             GoalService createGoal = new GoalService();
