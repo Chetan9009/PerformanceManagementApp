@@ -38,6 +38,7 @@ namespace PerformanceManagementApp.Controllers
         }
         public async Task<IActionResult> Create()
         {
+            //ViewBag.GetGoals = await GetGoals();
             ViewBag.Emp =await DDlEmployee();
             return View();
         }

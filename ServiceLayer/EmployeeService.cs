@@ -36,6 +36,21 @@ namespace ServiceLayer
 
         }
 
+        public async Task<EmployeeCreateResponse> Create(EmployeeCreateRequest createEmployeeRequest)
+        {
+            var response = await client.PostAsJsonAsync("https://localhost:44369/api/employee/create", createEmployeeRequest);
+            response.EnsureSuccessStatusCode();
+
+            EmployeeCreateResponse createEmployeeResponse = new EmployeeCreateResponse();
+            if (response.IsSuccessStatusCode)
+            {
+                var getApiResponse = response.Content.ReadAsStringAsync().Result;
+                createEmployeeResponse = JsonConvert.DeserializeObject<EmployeeCreateResponse>(getApiResponse);
+            }
+            return createEmployeeResponse;
+
+        }
+
 
     }
 }

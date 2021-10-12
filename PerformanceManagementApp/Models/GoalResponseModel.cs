@@ -8,7 +8,7 @@ namespace PerformanceManagementApp.Models
 {
     public class GoalResponseModel
     {
-
+        public bool isSelected { get; set; }
         public int Id { get; set; }
         [Display(Name = "Created By")]
         public int? CreatedBy { get; set; }
@@ -20,5 +20,10 @@ namespace PerformanceManagementApp.Models
         public DateTime? EndDate { get; set; }
         [Display(Name = "Score")]
         public string Score { get; set; }
+    }
+
+    public class GoallistModel
+    {
+        public List<GoalResponseModel> listGoal { get; set; }
     }
 }

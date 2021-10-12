@@ -1,0 +1,86 @@
+﻿@model PerformanceManagementApp.Models.Goal
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<h1>Map Goals</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+            <div class="form-group">
+                <label class="control-label"> Assign By</label>
+                 @Html.DropDownList("AssignBy", (IEnumerable
+<SelectListItem>)ViewBag.Emp, "--Select--", new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label class="control-label">Assign To</label>
+                @Html.DropDownList("AssignTo", (IEnumerable
+<SelectListItem>)ViewBag.Emp, "--Select--", new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-primary" />
+            </div>
+            <div class="form-group">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>Created By</th>
+                            <th>Title</th>
+                            <th>Score</th>
+                        </tr>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       @*@foreach (var item in Model)*@
+                        @for(int i=0; i < Model.listGoal.Count;i++)
+                          {
+                        <tr>
+                            <td>
+                                @Html.CheckBoxFor(m => Model.listGoal[i].isSelected)
+                        </td>
+                        <td>
+                           @Html.HiddenFor(m=>Model.listGoal[i].Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(m => Model.listGoal[i].CreatedBy)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(m => Model.listGoal[i].Title)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(m => Model.listGoal[i].Score)
+                        </td>
+                         </tr>
+                        }
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                    <input asp-route-id="AssignTo" type="submit" value="Submit" class="btn btn-primary" />
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                  
+                </table>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+}
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+

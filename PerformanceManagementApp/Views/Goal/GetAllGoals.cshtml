@@ -57,8 +57,8 @@
             </td>
             <td>
                 @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |*@
-                @*@Html.ActionLink("Delete", "Delete", new { id = item.Id })*@
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })*@
 
                 <a asp-controller="Goal" asp-action="GetGoal" asp-route-id="@item.Id">Edit</a> |
                 <a asp-controller="Goal" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
