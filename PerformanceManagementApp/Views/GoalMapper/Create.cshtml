@@ -1,4 +1,4 @@
-﻿@model PerformanceManagementApp.Models.Goal
+﻿@model PerformanceManagementApp.Models.GoallistModel
 @{
     ViewData["Title"] = "Create";
 }
@@ -29,27 +29,32 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>id</th>
+                            <th>Id</th>
                             <th>Created By</th>
                             <th>Title</th>
                             <th>Score</th>
                         </tr>
-                        </tr>
+                       
                     </thead>
                     <tbody>
                        @*@foreach (var item in Model)*@
-                        @for(int i=0; i < Model.listGoal.Count;i++)
-                          {
+                        @for (int i = 0; i < Model.listGoal.Count; i++)
+                        {
                         <tr>
                             <td>
                                 @Html.CheckBoxFor(m => Model.listGoal[i].isSelected)
-                        </td>
+                                @Html.HiddenFor(m => Model.listGoal[i].Id)
+                            </td>
+                       
                         <td>
-                           @Html.HiddenFor(m=>Model.listGoal[i].Id)
+                                                
+                             
+                            @Html.DisplayFor(m=>Model.listGoal[i].FirstName)
+                                    
                         </td>
-                        <td>
+                        @*<td>
                             @Html.DisplayFor(m => Model.listGoal[i].CreatedBy)
-                        </td>
+                        </td>*@
                         <td>
                             @Html.DisplayFor(m => Model.listGoal[i].Title)
                         </td>

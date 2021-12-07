@@ -23,8 +23,8 @@ namespace PerformanceManagementApp.Controllers
             ViewBag.Emp = await ctrl.DDlEmployee();
 
 
-            var goals =await GetGoals();
-            Goal g = new Goal();
+            var goals =await GetEmployeeGoals();
+            GoallistModel g = new GoallistModel();
             g.listGoal = goals;
 
             //ViewBag.Emp = await goal.DDlEmployee();
@@ -43,10 +43,11 @@ namespace PerformanceManagementApp.Controllers
                     Goals[i++] =item.Id;
                   }
               }
+
               AssignGoalRequest assignGoal = new AssignGoalRequest()
             {
                 AssignBy = AssignBy,
-                Goals = Goals
+              Goals = Goals
             };
                 
             AssignGoalService assignGoals = new AssignGoalService();
@@ -54,28 +55,50 @@ namespace PerformanceManagementApp.Controllers
              return Redirect("Create");
             }
 
-        
-        public async Task<List<GoalResponseModel>> GetGoals()
+        public async Task<List<GoalResponseModel>> GetEmployeeGoals()
         {
-            GoalService createGoal = new GoalService();
-            var responseAllGoals = await createGoal.GetAllGoals();
-            List<GoalResponseModel> resopnseAllGoalsCreateModel = new List<GoalResponseModel>();
+            EmployeGoalService empGoal = new EmployeGoalService();
+            var responseAllEmployeeGoals = await empGoal.GetAllEmployeeGoal();
 
-            foreach (var i in responseAllGoals)
+            List<GoalResponseModel> responseEmployeeGoal = new List<GoalResponseModel>();
+            foreach (var i in responseAllEmployeeGoals)
             {
-                resopnseAllGoalsCreateModel.Add(new GoalResponseModel
+                responseEmployeeGoal.Add(new GoalResponseModel
                 {
                     Id = i.Id,
                     CreatedBy = i.CreatedBy,
+                    FirstName = i.FirstName,
+                    LastName = i.LastName,
                     Title = i.Title,
                     StartDate = i.StartDate,
                     EndDate = i.EndDate,
                     Score = i.Score
+
                 });
-
-
             };
-            return resopnseAllGoalsCreateModel;
+            return responseEmployeeGoal;
         }
+        //public async Task<List<GoalResponseModel>> GetGoals()
+        //{
+        //    GoalService createGoal = new GoalService();
+        //    var responseAllGoals = await createGoal.GetAllGoals();
+        //    List<GoalResponseModel> resopnseAllGoalsCreateModel = new List<GoalResponseModel>();
+
+        //    foreach (var i in responseAllGoals)
+        //    {
+        //        resopnseAllGoalsCreateModel.Add(new GoalResponseModel
+        //        {
+        //            Id = i.Id,
+        //            CreatedBy = i.CreatedBy,
+        //            Title = i.Title,
+        //            StartDate = i.StartDate,
+        //            EndDate = i.EndDate,
+        //            Score = i.Score
+        //        });
+
+
+        //    };
+        //    return resopnseAllGoalsCreateModel;
+        //}
     }
 }

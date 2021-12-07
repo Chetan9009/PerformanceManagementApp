@@ -8,6 +8,8 @@ namespace PerformanceManagementApp.Models
 {
     public class GoalResponseModel
     {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         public bool isSelected { get; set; }
         public int Id { get; set; }
         [Display(Name = "Created By")]
